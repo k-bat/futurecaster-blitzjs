@@ -1,0 +1,8 @@
+-- CreateTable
+CREATE TABLE "Futurecast" (
+    "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "updatedAt" DATETIME NOT NULL,
+    "mainText" TEXT NOT NULL,
+    "castToken" TEXT NOT NULL
+);
