@@ -23,6 +23,9 @@ model User {
 
   tokens   Token[]
   sessions Session[]
+
+  // app-specific fields below
+  coins Int @default(0)
 }
 
 model Session {
