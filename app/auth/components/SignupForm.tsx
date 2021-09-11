@@ -1,8 +1,9 @@
-import { Link, Routes, useMutation } from "blitz"
-import { LabeledTextField } from "app/core/components/LabeledTextField"
-import { Form, FORM_ERROR } from "app/core/components/Form"
 import signup from "app/auth/mutations/signup"
 import { Signup } from "app/auth/validations"
+import { Form, FORM_ERROR } from "app/core/components/Form"
+import { LabeledTextField } from "app/core/components/LabeledTextField"
+import { ReturnHomeButton } from "app/core/components/ReturnHomeButton"
+import { Link, Routes, useMutation } from "blitz"
 
 type SignupFormProps = {
   onSuccess?: () => void
@@ -37,9 +38,7 @@ export const SignupForm = (props: SignupFormProps) => {
         <LabeledTextField name="password" label="Password" placeholder="Password" type="password" />
       </Form>
 
-      <div style={{ marginTop: "1rem" }}>
-        <Link href={Routes.Home()}>Return to Home Page</Link>
-      </div>
+      <ReturnHomeButton />
     </div>
   )
 }

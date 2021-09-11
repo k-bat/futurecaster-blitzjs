@@ -1,8 +1,9 @@
-import { AuthenticationError, Link, useMutation, Routes } from "blitz"
-import { LabeledTextField } from "app/core/components/LabeledTextField"
-import { Form, FORM_ERROR } from "app/core/components/Form"
 import login from "app/auth/mutations/login"
 import { Login } from "app/auth/validations"
+import { Form, FORM_ERROR } from "app/core/components/Form"
+import { LabeledTextField } from "app/core/components/LabeledTextField"
+import { ReturnHomeButton } from "app/core/components/ReturnHomeButton"
+import { AuthenticationError, Link, Routes, useMutation } from "blitz"
 
 type LoginFormProps = {
   onSuccess?: () => void
@@ -48,9 +49,7 @@ export const LoginForm = (props: LoginFormProps) => {
         Or <Link href={Routes.SignupPage()}>Sign Up</Link>
       </div>
 
-      <div style={{ marginTop: "1rem" }}>
-        <Link href={Routes.Home()}>Return to Home Page</Link>
-      </div>
+      <ReturnHomeButton />
     </div>
   )
 }
