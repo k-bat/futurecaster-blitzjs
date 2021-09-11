@@ -65,68 +65,35 @@ const Home: BlitzPage = () => {
             <UserInfo />
           </Suspense>
         </div>
-        <p>
-          <strong>
-            To add a new model to your app, <br />
-            run the following in your terminal:
-          </strong>
-        </p>
-        <pre>
-          <code>blitz generate all project name:string</code>
-        </pre>
-        <div style={{ marginBottom: "1rem" }}>(And select Yes to run prisma migrate)</div>
+
         <div>
           <p>
-            Then <strong>restart the server</strong>
-          </p>
-          <pre>
-            <code>Ctrl + c</code>
-          </pre>
-          <pre>
-            <code>blitz dev</code>
-          </pre>
-          <p>
-            and go to{" "}
-            <Link href="/projects">
-              <a>/projects</a>
+            Go to
+            <Link href="/futurecasts">
+              <a>/futurecasts</a>
             </Link>
           </p>
         </div>
+
         <div className="buttons" style={{ marginTop: "5rem" }}>
           <a
-            className="button"
-            href="https://blitzjs.com/docs/getting-started?utm_source=blitz-new&utm_medium=app-template&utm_campaign=blitz-new"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-          <a
             className="button-outline"
-            href="https://github.com/blitz-js/blitz"
+            href="https://github.com/Vandivier/futurecaster-blitzjs"
             target="_blank"
             rel="noopener noreferrer"
           >
             Github Repo
-          </a>
-          <a
-            className="button-outline"
-            href="https://discord.blitzjs.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Discord Community
           </a>
         </div>
       </main>
 
       <footer>
         <a
-          href="https://blitzjs.com?utm_source=blitz-new&utm_medium=app-template&utm_campaign=blitz-new"
+          href="https://www.youtube.com/watch?v=F6ChRAL-i5Y&list=PL4hsXTgWARMy7gB1pwxjFFM31xCwKfosF"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by Blitz.js
+          Developer by John Vandivier as part of the Moonlogs Series
         </a>
       </footer>
 
