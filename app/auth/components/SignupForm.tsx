@@ -1,4 +1,4 @@
-import { useMutation } from "blitz"
+import { Link, Routes, useMutation } from "blitz"
 import { LabeledTextField } from "app/core/components/LabeledTextField"
 import { Form, FORM_ERROR } from "app/core/components/Form"
 import signup from "app/auth/mutations/signup"
@@ -36,6 +36,10 @@ export const SignupForm = (props: SignupFormProps) => {
         <LabeledTextField name="email" label="Email" placeholder="Email" />
         <LabeledTextField name="password" label="Password" placeholder="Password" type="password" />
       </Form>
+
+      <div style={{ marginTop: "1rem" }}>
+        <Link href={Routes.Home()}>Return to Home Page</Link>
+      </div>
     </div>
   )
 }
