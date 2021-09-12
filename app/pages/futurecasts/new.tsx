@@ -12,12 +12,7 @@ const NewFuturecastPage: BlitzPage = () => {
       <h1>Create New Futurecast</h1>
 
       <FuturecastForm
-        submitText="Create Futurecast"
-        // TODO use a zod schema for form validation
-        //  - Tip: extract mutation's schema into a shared `validations.ts` file and
-        //         then import and use it here
-        // schema={CreateFuturecast}
-        // initialValues={{}}
+        submitText="Create Futurecast...this will cost one coin!"
         onSubmit={async (values) => {
           try {
             const futurecast = await createFuturecastMutation(values)
