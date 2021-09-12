@@ -44,8 +44,9 @@ const getFuturecastByCastToken = (uuid: string): string => {
 
   for (let i = 0; i < currFortuneTemplate.length; i++) {
     const currTemplatePiece = currFortuneTemplate[i] as string[]
-    const uuidSeed = uuid.length % currTemplatePiece.length
-    const selectedPiece = currTemplatePiece[uuidSeed] || defaultPieceText
+    const uuidSeedIndex = i % uuid.length
+    const uuidSeed = uuid.charCodeAt(uuidSeedIndex)
+    const selectedPiece = currTemplatePiece[uuidSeed % currTemplatePiece.length] || defaultPieceText
     fortuneText = `${fortuneText} ${selectedPiece}`
   }
 
