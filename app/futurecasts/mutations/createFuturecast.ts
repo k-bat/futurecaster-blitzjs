@@ -49,7 +49,7 @@ const getFuturecastByCastToken = (uuid: string): string => {
     fortuneText = `${fortuneText} ${selectedPiece}`
   }
 
-  return fortuneText
+  return fortuneText.trim()
 }
 
 export default resolver.pipe(resolver.authorize(), async () => {
