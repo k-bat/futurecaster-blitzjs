@@ -3,7 +3,7 @@ import { Signup } from "app/auth/validations"
 import { Form, FORM_ERROR } from "app/core/components/Form"
 import { LabeledTextField } from "app/core/components/LabeledTextField"
 import { ReturnHomeButton } from "app/core/components/ReturnHomeButton"
-import { Link, Routes, useMutation } from "blitz"
+import { useMutation } from "blitz"
 
 type SignupFormProps = {
   onSuccess?: () => void
