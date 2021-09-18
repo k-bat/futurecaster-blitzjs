@@ -1,7 +1,8 @@
-import { Suspense } from "react"
-import { Head, Link, usePaginatedQuery, useRouter, BlitzPage, Routes } from "blitz"
+import { ReturnHomeButton } from "app/core/components/ReturnHomeButton"
 import Layout from "app/core/layouts/Layout"
 import getFuturecasts from "app/futurecasts/queries/getFuturecasts"
+import { BlitzPage, Head, Link, Routes, usePaginatedQuery, useRouter } from "blitz"
+import { Suspense } from "react"
 
 const ITEMS_PER_PAGE = 100
 
@@ -47,6 +48,7 @@ const FuturecastsPage: BlitzPage = () => {
       </Head>
 
       <div>
+        <ReturnHomeButton />
         <p>
           <Link href={Routes.NewFuturecastPage()}>
             <a>Create Futurecast</a>
